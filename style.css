@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@100;200&family=Tiro+Devanagari+Marathi&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+}
+
+html, body{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffbd0e;
+}
+
+@media (min-width:1130px){
+
+/* Animações - Início */
+
+@keyframes animacao-direita-esquerda {
+    0%{
+        transform: translateX(-1000px);
+    };
+    50%{
+        transform: translateX(-100px);
+    };
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacao-esquerda-direita {
+    0%{
+        transform: translateX(300px);
+        opacity: 0;
+    };
+    50%{
+        transform: translateX(200px);
+        opacity: 0.5;
+    };
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animações - Fim */
+
+.botao-menu{
+    display: none;
+}
+
+header#cabecalho{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header#cabecalho img{
+    width: 180px;
+}
+
+header#cabecalho nav a{
+    color: #b58000;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+header#cabecalho nav.cabecalho-principal a:hover{
+    color: #9b6d00;
+}
+
+header#cabecalho nav.cabecalho-principal a.botao-entrar{
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+header#cabecalho nav.cabecalho-principal a.botao-entrar:hover{
+    color: #fff;
+}
+
+/* Dark Mode - Início */
+
+header#cabecalho nav.cabecalho-principal input[type="checkbox"]{
+    display: none;
+}
+
+header#cabecalho nav.cabecalho-principal label{
+    color: rgb(205, 144, 1);
+    font-size: 20px;
+    position: relative;
+    background: black;
+    padding: 6px;
+    border-radius: 30px;
+}
+
+header#cabecalho nav.cabecalho-principal label i.um{
+    position: relative;
+    top: 0;
+    left: -1px;
+    color: #f1c40f;
+}
+
+header#cabecalho nav.cabecalho-principal label i.dois{
+    position: relative;
+    top: 0;
+    right: -8px;
+    color: #f39c12;
+}
+
+#ball{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 1.8px;
+    left: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#dark-mode:checked ~ #ball{
+    left: 31px;
+}
+
+/* Formatações do Dark Mode */
+
+section.dark-mode-partes-meio-fundo{
+    background: #1B1B1B;
+    transition: all 0.3s;
+}
+
+section.dark-mode-partes-meio-texto{
+    color: #fff;
+    transition: all 0.3s;
+}
+
+footer.dark-mode-partes-meio-fundo{
+    background: #1B1B1B;
+    transition: all 0.3s;
+}
+
+footer nav a.dark-mode-partes-meio-texto{
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+/* Dark Mode - Fim */
+
+main#container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+main#container section#parte-inicial{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+main#container section#parte-inicial img{
+    width: 40%;
+    object-fit: contain;
+    animation: animacao-esquerda-direita 4s ease-in;
+}
+
+main#container section#parte-inicial h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+main#container section#parte-inicial p{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+main#container section#parte-inicial span p{
+    border-right: 2px solid red;
+}
+
+main#container section#parte-inicial form input[type="email"]{
+    font-size: 26px;
+    border: 4px solid #b9b38b;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+main#container section#parte-inicial form input[type="submit"]{
+    font-size: 24px;
+    transform: translateY(-10px);
+    background: blue;
+    font-weight: none;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+main#container section#parte-inicial form input[type="submit"]:active{
+    background: rgb(0, 0, 150);
+}
+
+main#container section#parte-inicial #icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main#container section#parte-inicial #icons p{
+    transform: translateY(9px);
+    margin-right: 5px;
+}
+
+main#container section#parte-inicial ion-icon{
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+main#container section#parte-inicial ion-icon:hover{
+    background: #fff;
+    color: black;
+    cursor: pointer;
+}
+
+.parte-meio, .parte-meio2, .parte-meio3{
+    background: #fff;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section.parte-meio{
+    justify-content: space-evenly;
+    border-top: 4px solid #ccc;
+}
+
+section.parte-meio img{
+    width: 50%;
+}
+
+section.parte-meio2 img{
+    width: 40%;
+    /*animation: animacao-direita-esquerda 1s ease-in-out;*/
+}
+
+section.parte-meio3{
+    text-align: center;
+}
+
+section.parte-meio3 img{
+    width: 70%;
+}
+
+section.parte-meio h1, section#parte-meio2 h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+section.parte-meio3 h1{
+    margin-bottom: 15px;
+}
+
+section.parte-meio3 img{
+    margin-bottom: 15px;
+}
+
+section.parte-meio p, section.parte-meio2 p{
+    margin-bottom: 20px;
+}
+
+section.parte-meio button, section.parte-meio2 button{
+    width: 80px;
+    height: 40px;
+    font-size: 1em;
+    padding: 4px;
+    cursor: pointer;
+    background: blue;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+section.parte-meio button:active, section.parte-meio2 button:active{
+    background: rgb(0, 0, 150);
+}
+
+footer{
+    width: 100%;
+    background: #fff;
+    padding: 50px;
+    text-align: left;
+}
+
+footer a{
+    margin-left: 15px;
+    color: #1876db;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+footer a:hover{
+    border-bottom: 1px solid blue;
+}
+
+.seta1 ion-icon{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+body div ion-icon.dark-mode-seta1{
+    color: #fff;
+}
+
+}
+
